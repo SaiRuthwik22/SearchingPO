@@ -25,16 +25,16 @@ async function getStarted(){
     console.log(data)
     detailsContainer.innerHTML = `
                 <div class="details">
-                <h3>Lat: <span>${data.latitude}</span></h3>
-                <h3>Long: <span>${data.longitude}</span></h3>
+                <h2>Lat: <span>${data.latitude}</span></h2>
+                <h2>Long: <span>${data.longitude}</span></h2>
             </div>
             <div class="details">
-                <h3>City: <span>${data.city}</span></h3>
-                <h3>Region: <span>${data.region}</span></h3>
+                <h2>City: <span>${data.city}</span></h2>
+                <h2>Region: <span>${data.region}</span></h2>
             </div>
             <div class="details">
-                <h3>Organization: <span>${data.org}</span></h3>
-                <h3>Hostname: <span>${data.network}</span></h3>
+                <h2>Organization: <span>${data.org}</span></h2>
+                <h2>Hostname: <span>${data.network}</span></h2>
             </div>`
     
     mapContainer.innerHTML =`            <h1>Your Current Location</h1>
@@ -73,7 +73,7 @@ function renderCards(arr){
 function SearchPO(){
     let inputValue = document.getElementById("input").value
     let sortedarr = postOffices.filter((ele)=>{
-        if(ele.Name.toLowerCase().includes(inputValue.toLowerCase())){
+        if(ele.Name.toLowerCase().includes(inputValue.toLowerCase()) || ele.Block.toLowerCase().includes(inputValue.toLowerCase())){
             return ele
         }
     })

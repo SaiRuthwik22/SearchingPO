@@ -76,7 +76,7 @@ iframe{
 }
 .details span{
     color: white;
-    font-size: 1rem;
+    font-size: 1.3rem;
 }
 #card-list{
     display: flex;
@@ -100,7 +100,7 @@ iframe{
     flex-direction: column;
     gap: 10px;
     border-radius: 5px;
-    overflow: scroll;
+    overflow: hidden;
 }
 .more h1{
     text-align: center;
