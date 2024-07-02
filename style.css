@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+
+}
+body{
+    height: 100vh;
+}
+
+#page1{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+#content1{
+    width: 50%;
+    padding: 30px;
+    background-color: black;
+    color: white;
+}
+#content1 h1{
+    color: #575A85;
+    margin-bottom: 20px;
+}
+#content1 p{
+    line-height: 1.5rem;
+}
+#content2{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: #575A85;
+
+}
+#content2 p{
+    color: #B8BCCC;
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+#content2 button{
+    padding: 10px 50px;
+    background-color: #575A85;
+    color: #B8BCCC;
+    border: 1px solid #B8BCCC;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+#dispIP span{
+    color: white;
+}
+#page2{
+    background-color: black;
+    color: #B8BCCC;
+    padding: 30px;
+}
+#details-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0px;
+}
+#map-container{
+    text-align: center;
+    background-color: #575A85;
+    padding: 30px;
+}
+iframe{
+    width: 100%;
+    height: 500px;
+    margin-top: 30px;
+}
+.details span{
+    color: white;
+    font-size: 1rem;
+}
+#card-list{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.card p{
+    font-size: 18px;
+    font-weight: bold;
+}
+.card span{
+    font-size: 16px;
+    font-weight: 100;
+}
+.card{
+    background-color: #575A85;
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 5px;
+    overflow: scroll;
+}
+.more h1{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+#time-details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+input{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+    padding: 20px;
+    background-color: black;
+    border: 2px solid #575A85;
+    border-radius: 5px;
+    color: white;
+}
+
+@media screen and (max-width:760px) {
+    #details-container{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+@media screen and (max-width:515px) {
+    iframe{
+        height: 300px;
+    }
+}
