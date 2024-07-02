@@ -6,7 +6,6 @@ async function getIP() {
     IP = data.ip
     let dispIP = document.getElementById("dispIP")
     dispIP.innerHTML = `Your Current IP Address is <span>${IP}</span>`
-    console.log(IP)
 }
 getIP()
 async function getStarted(){
@@ -22,7 +21,6 @@ async function getStarted(){
     showIp.textContent = IP 
     let response = await fetch(`https://ipapi.co/${IP}/json/`)
     let data = await response.json()
-    console.log(data)
     detailsContainer.innerHTML = `
                 <div class="details">
                 <h2>Lat: <span>${data.latitude}</span></h2>
@@ -43,7 +41,6 @@ async function getStarted(){
     let dateandtime = new Date().toLocaleString("en-US", { timeZone: `${data.timezone}` });
     const resfromPOAPI = await fetch(`https://api.postalpincode.in/pincode/${data.postal}`)
     const datafromPOAPI = await resfromPOAPI.json()
-    console.log(datafromPOAPI)
     postOffices = datafromPOAPI[0].PostOffice
     timeDetails.innerHTML =`
             <p>Time Zone: <span>${data.timezone}</span></p>
