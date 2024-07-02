@@ -2,6 +2,14 @@ let IP;
 let postOffices=[]
 async function getIP() {
     const response = await fetch("https://api.ipify.org?format=json")
+    if(!response.ok){
+        let dispIP = document.getElementById("dispIP")
+        let button = document.getElementById("getStartedButton")
+        dispIP.innerHTML = `IP Address Not Found`
+        button.style.display = "none"
+        return
+
+    }
     const data = await response.json()
     IP = data.ip
     let dispIP = document.getElementById("dispIP")
